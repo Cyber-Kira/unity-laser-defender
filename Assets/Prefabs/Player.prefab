@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4723677015194592571}
   - component: {fileID: 4723677015194592580}
-  - component: {fileID: 4723677015194592581}
+  - component: {fileID: 3758018800210040430}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4723677015194592581
+--- !u!114 &3758018800210040430
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,11 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
-  xMin: 0
-  yMin: 0
-  xMax: 0
-  yMax: 0
   padding: 1
   laserPrefab: {fileID: 4296026447078847533, guid: a5ed09b673189904292c85be0d6d35df,
     type: 3}
-  projectileSpeed: 20
+  projectileSpeed: 10
+  projectileFiringPeriod: 0.1
