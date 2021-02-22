@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2717294061793012776}
   - component: {fileID: 2902650576114298985}
   - component: {fileID: 8273538022669743641}
+  - component: {fileID: 6199653646433351319}
   m_Layer: 0
   m_Name: Player Laser
   m_TagString: Untagged
@@ -92,7 +93,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 4296026447078847533}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -103,3 +104,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!60 &6199653646433351319
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4296026447078847533}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.13, y: 0.54}
+    newSize: {x: 0.13, y: 0.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.065, y: 0.26999998}
+      - {x: -0.065, y: -0.26999998}
+      - {x: 0.044999998, y: -0.26999998}
+      - {x: 0.055, y: -0.25}
+      - {x: 0.065, y: -0.01}
+      - {x: 0.065, y: 0.26999998}
