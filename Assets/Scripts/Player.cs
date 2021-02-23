@@ -86,14 +86,14 @@ public class Player : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collider)
     {
         DamageDealer damageDealer = collider.gameObject.GetComponent<DamageDealer>();
-
+        if (!damageDealer) { return; }
         processHit(damageDealer);
     }
 
     private void processHit(DamageDealer damageDealer)
     {
         health = health - damageDealer.GetDamage();
-
+        damageDealer.Hit();
         if (health <= 0)
         {
             Destroy(gameObject);
