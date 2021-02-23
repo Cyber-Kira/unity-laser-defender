@@ -126,6 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 5810313342373164538, guid: 154f329d6ac855c4aa408f739569041a,
     type: 3}
+  explosionEffect: {fileID: 3362565271449659410, guid: b3c4a2377bfd36542adf8e0c92956f57,
+    type: 3}
   health: 300
   shotCounter: 0
   minTimeBetweenShots: 0.2
