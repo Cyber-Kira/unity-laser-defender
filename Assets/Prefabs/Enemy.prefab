@@ -124,4 +124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88200f84aefd46c45a738db53c22ebc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectile: {fileID: 5810313342373164538, guid: 154f329d6ac855c4aa408f739569041a,
+    type: 3}
   health: 300
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBerweenShots: 3
+  projectileSpeed: 10

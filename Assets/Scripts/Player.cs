@@ -6,8 +6,12 @@ public class Player : MonoBehaviour
 {
 
     // config porams
+    [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
+    [SerializeField] int health = 200; 
+
+    [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
@@ -77,6 +81,23 @@ public class Player : MonoBehaviour
         var newYPosition = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
 
         transform.position = new Vector2(newXPosition, newYPosition);
+    }
+
+    public void OnTriggerEnter2D(Collider2D collider)
+    {
+        DamageDealer damageDealer = collider.gameObject.GetComponent<DamageDealer>();
+
+        processHit(damageDealer);
+    }
+
+    private void processHit(DamageDealer damageDealer)
+    {
+        health = health - damageDealer.GetDamage();
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     
 }
