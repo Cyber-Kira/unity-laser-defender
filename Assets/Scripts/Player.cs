@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Player : MonoBehaviour
 {
 
@@ -9,12 +10,16 @@ public class Player : MonoBehaviour
     [Header("Player")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
-    [SerializeField] int health = 200; 
+    [SerializeField] int health = 800; 
 
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
+
+    [Header("Sounds")]
+    [SerializeField] AudioClip explosionSound;
+    [SerializeField] [Range(0,1)] float volume = 1;
 
     Coroutine firingCoroutine;
 
@@ -96,8 +101,16 @@ public class Player : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
+            PlaySound();
             Destroy(gameObject);
         }
+    }
+
+    private void PlaySound()
+    {
+        AudioClip clip = explosionSound;
+        Vector3 position = new Vector3(0, 0, -5);
+        AudioSource.PlayClipAtPoint(clip, position, volume);
     }
     
 }

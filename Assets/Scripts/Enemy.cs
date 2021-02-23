@@ -2,16 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Enemy : MonoBehaviour
 {
 
-    [SerializeField] GameObject projectile;
-    [SerializeField] GameObject explosionEffect;
+    [Header("Enemy")]
     [SerializeField] float health = 100;
-    [SerializeField] float shotCounter;
+
+    [Header("Projectile")]
+    [SerializeField] GameObject projectile;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBerweenShots = 3f;
     [SerializeField] float projectileSpeed = 10f;
+    [SerializeField] float shotCounter;
+
+    [Header("VFX")]
+    [SerializeField] GameObject explosionVFX;
+
+    [Header("Sounds")]
+    [SerializeField] AudioClip explosionSound;
+    [SerializeField] float volume = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -63,13 +73,20 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        PlaySound();
         Destroy(gameObject);
         GameObject explosion = Instantiate(
-            explosionEffect,
+            explosionVFX,
             transform.position,
             Quaternion.identity
         ) as GameObject;
-
         Destroy(explosion, 0.5f);
+    }
+
+    private void PlaySound()
+    {
+        AudioClip clip = explosionSound;
+        Vector3 position = new Vector3(0, 0, -5);
+        AudioSource.PlayClipAtPoint(clip, position, volume);
     }
 }

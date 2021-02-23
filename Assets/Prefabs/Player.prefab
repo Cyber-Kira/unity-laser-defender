@@ -102,6 +102,8 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 20
   projectileFiringPeriod: 0.05
+  explosionSound: {fileID: 8300000, guid: 8bfd19e1ea60a89458a5d1d712c96b20, type: 3}
+  volume: 0.5
 --- !u!60 &2240332485265662502
 PolygonCollider2D:
   m_ObjectHideFlags: 0
