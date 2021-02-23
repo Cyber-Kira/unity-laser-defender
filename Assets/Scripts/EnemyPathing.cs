@@ -28,7 +28,7 @@ public class EnemyPathing : MonoBehaviour
 
     public void Move()
     {
-        if (waypointIndex <= waypoints.Count- 1)
+        if (waypointIndex <= waypoints.Count - 1)
         {
             var targetPosition = waypoints[waypointIndex].transform.position;
             var movementThisFrame = waveConfig.getMoveSpeed() * Time.deltaTime;

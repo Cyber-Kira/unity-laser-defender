@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 985088988965000971}
   - component: {fileID: 985088988965000970}
+  - component: {fileID: -3765714956421111934}
   - component: {fileID: -12595815652904789}
+  - component: {fileID: -6457970438618278036}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -82,6 +84,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &-3765714956421111934
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985088988965000969}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.465
 --- !u!114 &-12595815652904789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +112,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffae7ce7c0f31154f91fbd3f716e9282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: d58656a215ff3424f86d9b8f13a6893e, type: 2}
-  waypoints: []
-  moveSpeed: 2
+--- !u!114 &-6457970438618278036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985088988965000969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88200f84aefd46c45a738db53c22ebc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300

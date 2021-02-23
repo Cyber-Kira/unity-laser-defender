@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9161188090738281528}
   - component: {fileID: -1617327138400611154}
-  - component: {fileID: 7583349109283138292}
+  - component: {fileID: -752561787997040311}
   m_Layer: 0
   m_Name: Shredder
   m_TagString: Untagged
@@ -42,7 +42,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.78102446, y: 0}
@@ -58,7 +58,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 14.147241, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7583349109283138292
+--- !u!114 &-752561787997040311
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
