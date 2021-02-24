@@ -8,13 +8,14 @@ public class Enemy : MonoBehaviour
 
     [Header("Enemy")]
     [SerializeField] float health = 100;
+    [SerializeField] int scoreValue = 100;
 
     [Header("Projectile")]
     [SerializeField] GameObject projectile;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBerweenShots = 3f;
     [SerializeField] float projectileSpeed = 10f;
-    [SerializeField] float shotCounter;
+    float shotCounter;
 
     [Header("VFX")]
     [SerializeField] GameObject explosionVFX;
@@ -73,6 +74,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         PlaySound();
         Destroy(gameObject);
         GameObject explosion = Instantiate(

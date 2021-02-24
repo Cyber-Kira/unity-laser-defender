@@ -97,7 +97,8 @@ public class Player : MonoBehaviour
 
     private void processHit(DamageDealer damageDealer)
     {
-        health = health - damageDealer.GetDamage();
+        int enemyDamage = damageDealer.GetDamage();
+        health = health - enemyDamage;
         damageDealer.Hit();
         if (health <= 0)
         {
@@ -110,6 +111,11 @@ public class Player : MonoBehaviour
         FindObjectOfType<Level>().LoadGameOver();
         Destroy(gameObject);
         PlaySound();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     private void PlaySound()
