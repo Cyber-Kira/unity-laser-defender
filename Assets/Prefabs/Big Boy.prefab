@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 913365039095354027}
   - component: {fileID: 779162776251335937}
   - component: {fileID: 1211201594294199127}
+  - component: {fileID: -2362675927979180120}
   - component: {fileID: -278216809248308993}
-  - component: {fileID: -2560062104254916947}
   - component: {fileID: 7268358302001260179}
   - component: {fileID: 119802513035987664}
   - component: {fileID: 6231837158530128674}
@@ -103,6 +103,29 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.515
+--- !u!114 &-2362675927979180120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002284093383329236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88200f84aefd46c45a738db53c22ebc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1200
+  scoreValue: 300
+  projectile: {fileID: 5810313342373164538, guid: 077f8716a12757c4ca0ea6aa15771398,
+    type: 3}
+  minTimeBetweenShots: 0.2
+  maxTimeBerweenShots: 3
+  projectileSpeed: 10
+  explosionVFX: {fileID: 3362565271449659410, guid: b3c4a2377bfd36542adf8e0c92956f57,
+    type: 3}
+  explosionSound: {fileID: 8300000, guid: 8fd134bb061adec4e8ab6eff65358692, type: 3}
+  volume: 1
 --- !u!114 &-278216809248308993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,29 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffae7ce7c0f31154f91fbd3f716e9282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-2560062104254916947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3002284093383329236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88200f84aefd46c45a738db53c22ebc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 700
-  scoreValue: 200
-  projectile: {fileID: 5810313342373164538, guid: 077f8716a12757c4ca0ea6aa15771398,
-    type: 3}
-  minTimeBetweenShots: 1.5
-  maxTimeBerweenShots: 2
-  projectileSpeed: 5
-  explosionVFX: {fileID: 3362565271449659410, guid: b3c4a2377bfd36542adf8e0c92956f57,
-    type: 3}
-  explosionSound: {fileID: 8300000, guid: 8fd134bb061adec4e8ab6eff65358692, type: 3}
-  volume: 0.5
 --- !u!50 &7268358302001260179
 Rigidbody2D:
   serializedVersion: 4
